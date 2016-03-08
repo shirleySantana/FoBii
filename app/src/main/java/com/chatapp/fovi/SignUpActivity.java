@@ -4,13 +4,16 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -22,7 +25,9 @@ public class SignUpActivity extends ActionBarActivity {
     private EditText editUser;
     private EditText editPass;
     private EditText editMail;
+    private TextView titulo;
     private ProgressBar pb;
+    private Button mCancelButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +37,19 @@ public class SignUpActivity extends ActionBarActivity {
         editUser = (EditText) findViewById(R.id.usernameField);
         editPass = (EditText) findViewById(R.id.passwordField);
         editMail = (EditText) findViewById(R.id.emailField);
+        titulo = (TextView) findViewById(R.id.textViewTitle);
         pb = (ProgressBar) findViewById(R.id.pbSignup);
+        mCancelButton = (Button) findViewById(R.id.cancel_Button);
+
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/sensei-medium.otf");
+        titulo.setTypeface(myFont);
+
+
+        getSupportActionBar().hide();
+    }
+
+    public void onClickCancel(View view){
+        finish();
     }
 
     public void onClickRegistro(View view){

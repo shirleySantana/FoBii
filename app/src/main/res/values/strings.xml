@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">FoVi</string>
+    <string name="app_name">FoBi</string>
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">MENSAJES</string>
+    <string name="title_section2">AMIGOS</string>
 
     <string name="username_hint">Nombre de usuario</string>
     <string name="password_hint">Contraseña</string>
+    <string name="mail_hint">E-mail</string>
     <string name="login_button_label">Ingresar</string>
-    <string name="sign_up_text">¡Regístrate!</string>
+    <string name="sign_up_text"><u>¿No tienes una cuenta? ¡Regístrate!</u></string>
     <string name="email_hint">E-mail</string>
     <string name="sign_up_button_label">Regístrate</string>
 
@@ -16,10 +16,53 @@
     <string name="titulo_dialog">¡Atención!</string>
 
     <string name="menu_logout">Cerrar sesión</string>
+    <string name="menu_editar_amigos">Añadir amigos</string>
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_inbox_fragment">InboxFragment</string>
+    <string name="title_dialog">Atención</string>
 
+    <string name="text_title">FoBi</string>
+    <string name="text_subtitle">Made in UEM</string>
+
+    <string name="empty_inbox_label">No hay nuevos mensajes</string>
+    <string name="empty_friends_label">Añade amigos para empezar</string>
+
+    <string name="editFriendsErrorTitle">No se ha podido realizar la consulta</string>
+
+    <string name="menu_camera_label">Camara</string>
+    <string name="pick_option">Selecciona una opción</string>
+    <string name="menu_send">Enviar</string>
+
+    <string-array name="camera_choices">
+        <item>Haz una foto</item>
+        <item>Haz un video</item>
+        <item>Elige una foto</item>
+        <item>Elige un video</item>
+    </string-array>
+
+    <string name="error_crear_directorio">Fallo al crear el directorio</string>
+    <string name="error_almacenamiento">Error de almacenamiento</string>
+    <string name="error_camara">El usuario no ha salido de la cámara</string>
+    <string name="error_user">Se ha producido un error</string>
+    <string name="error_tam_almacenamiento">Tamaño máximo 10MB</string>
+    <string name="error_tam_almacenamiento2">Se ha superado el tamaño máximo</string>
+
+    <string name="btn_cancel">Cancelar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_friends_fragment">FriendsFragment</string>
+    <string name="title_activity_edit_friends">Editar Amigos</string>
+    <string name="title_activity_recipients">Enviar a</string>
+
+    <string name="mensaje_succes">Archivo enviado</string>
+    <string name="mensaje_error_envio">El envio no se ha realizado correctamente</string>
+    <string name="title_activity_view_image">Visor de Imagenes</string>
+
+    <string name="content_desc_message_icon">Message icon</string>
+    <string name="content_desc_user_avatar">User avatar</string>
+    <string name="title_activity_splash__screen">FoBi</string>
 
 </resources>

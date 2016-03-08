@@ -1,54 +1,79 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.chatapp.fovi.SignUpActivity">
-
-    <EditText
+    android:layout_height="match_parent"
+    tools:context="com.chatapp.fovi.SignUpActivity"
+    style="@style/AuthBackground"
+    >
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/usernameField"
+        android:layout_height="match_parent"
+        android:id="@+id/backgroundImage"
+        android:scaleType="fitEnd"
+        android:src="@drawable/backgroundfobi"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:hint="@string/username_hint" />
+        android:layout_alignLeft="@+id/editTextLayout"
+        android:layout_alignStart="@+id/editTextLayout" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/passwordField"
-        android:layout_below="@+id/usernameField"
-        android:layout_centerHorizontal="true"
-        android:hint="@string/password_hint" />
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:text="@string/text_title"
+        style="@style/TitleStyle"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/emailField"
-        android:layout_below="@+id/passwordField"
-        android:layout_alignLeft="@+id/passwordField"
-        android:layout_alignStart="@+id/passwordField"
-        android:hint="@string/email_hint" />
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:text="@string/text_subtitle"
+        style="@style/SubtitleStyle"/>
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        style="@style/AuthLinearStyle"
+        android:layout_centerHorizontal="true"
+        >
+
+        <EditText
+            android:id="@+id/usernameField"
+            android:hint="@string/username_hint"
+            style="@style/EditTextStyle" />
+
+        <EditText
+            style="@style/EditTextStyle"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordField"
+            android:hint="@string/password_hint"/>
+
+        <EditText
+            style="@style/EditTextStyle"
+            android:id="@+id/emailField"
+            android:hint="@string/mail_hint"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/buttonDivider"
+        android:src="@drawable/button_divider"
+        style="@style/ButtonDividerStyle" />
+
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up_button_label"
-        android:id="@+id/signupButton"
-        android:layout_below="@+id/emailField"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickRegistro" />
+        android:text="@string/login_button_label"
+        android:id="@+id/loginButton"
+        android:onClick="onClickRegistro"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_toLeftOf="@+id/buttonDivider"
+        style="@style/btnSignStyle" />
+
+    <Button
+        style="@style/btnSignStyle"
+        android:text="@string/btn_cancel"
+        android:id="@+id/cancel_Button"
+        android:onClick="onClickCancel"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/buttonDivider"/>
 
     <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/pbSignup"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible"/>
+        style="@style/ProgressBarSignStyle" />
 </RelativeLayout>
