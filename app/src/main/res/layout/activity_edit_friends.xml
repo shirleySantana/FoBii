@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chatapp.fovi.EditFriendsActivity"
+    android:background="@color/light_blue_background">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/list"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="38dp"
+        android:background="@android:color/white"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pbEdit"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"/>
+
+    <!--shape
+        android:shape="oval">
+        <solid
+            android:color="#666666"/>
+        <size
+            android:width="120dp"
+            android:height="120dp"/>
+    </shape-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewAddFriends"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/ic_action_ok"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="onClickAddFriends" />
+
+</FrameLayout>

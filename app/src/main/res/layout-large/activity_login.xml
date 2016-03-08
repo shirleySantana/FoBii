@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chatapp.fovi.LoginActivity"
+    style="@style/AuthBackground">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/backgroundImage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitEnd"
+        android:src="@drawable/backgroundfobi"
+        android:layout_alignParentStart="false" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/text_title"
+        android:textSize="60sp"
+        android:textColor="@color/primary_text"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/text_subtitle"
+        android:textSize="13sp"
+        android:textColor="@android:color/white"
+        />
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        style="@style/AuthLinearStyle"
+        android:layout_marginLeft="@dimen/activity_vertical_margin_large"
+        android:layout_marginRight="@dimen/activity_vertical_margin_large">
+
+        <EditText
+
+            android:id="@+id/usernameField"
+            android:hint="@string/username_hint"
+            style="@style/EditTextStyle"
+           />
+
+        <EditText
+            style="@style/EditTextStyle"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordField"
+            android:hint="@string/password_hint"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+          />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_button_label"
+        android:id="@+id/loginButton"
+        android:onClick="onClickLogin"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/buttom_custom"
+        android:layout_marginLeft="@dimen/activity_vertical_margin_large"
+        android:layout_marginRight="@dimen/activity_vertical_margin_large"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_text"
+        android:id="@+id/signUpText"
+        android:textSize="15sp"
+        android:onClick="signUpOnClick"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pbLogin"
+        android:visibility="invisible"
+        android:layout_below="@+id/signUpText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
+
+</RelativeLayout>
